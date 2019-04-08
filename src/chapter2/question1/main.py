@@ -11,7 +11,6 @@ def main():
     print(opp_name + " Turn")
     opp_character = choose_character(characters, opp_name)
 
-
     my_hp = 100
     opp_hp = 100
     round = 1
@@ -30,7 +29,9 @@ def main():
         my_hp -= opp_atk
         opp_hp -= my_atk
         print( my_name + " HP is " + str(my_hp))
+        print( hp_gauge(my_hp))
         print( opp_name + " HP is " + str(opp_hp))
+        print( hp_gauge(opp_hp))
 
         time.sleep(0.1)
         if my_hp <= 0 and opp_hp <= 0:
@@ -47,6 +48,7 @@ def main():
         round += 1
         print()
 
+
 def choose_character(characters, player_name):
     print("Please select " + player_name + " character")
     print(characters)
@@ -58,6 +60,13 @@ def choose_character(characters, player_name):
     else:
         print("Your select character isn't correct")
         choose_character(characters, player_name)
+
+
+def hp_gauge(hp_amount):
+    hp_gauge = ""
+    for i in range(0, hp_amount):
+        hp_gauge += "■"
+    return hp_gauge
 
 
 if __name__ == "__main__":
