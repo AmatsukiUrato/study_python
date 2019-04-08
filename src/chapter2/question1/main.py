@@ -65,7 +65,7 @@ def choose_character(characters, player_name):
 def hp_gauge(hp_amount):
     hp_gauge = ""
     for i in range(0, hp_amount):
-        hp_gauge += "■"
+        hp_gauge += "█"
     return hp_gauge
 
 
