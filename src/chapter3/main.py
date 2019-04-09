@@ -1,8 +1,9 @@
 # coding: utf-8
 import random
+
 # PyCharmではfromを正確に書かなければ`No module`になる
-from src.chapter3.jyanken import Jyanken
-from src.chapter3.player import Player
+from jyanken import Jyanken
+from player import Player
 
 def main():
     print("ジャンケンを始めます")
