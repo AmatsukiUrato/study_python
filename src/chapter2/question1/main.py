@@ -39,11 +39,11 @@ def main():
             break
 
         if my_hp <= 0:
-            print(opp_name + " WIN!")
+            print(opp_name + " " + opp_character + " WIN!")
             break
 
         if opp_hp <= 0:
-            print(my_name + " WIN!")
+            print(my_name + " " + my_character + " WIN!")
             break
         round += 1
         print()
@@ -64,6 +64,7 @@ def choose_character(characters, player_name):
 
 def hp_gauge(hp_amount):
     hp_gauge = ""
+
     for i in range(0, hp_amount):
         hp_gauge += "█"
     return hp_gauge
