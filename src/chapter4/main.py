@@ -1,17 +1,15 @@
 # coding: utf-8
 import random
-
-# PyCharmではfromを正確に書かなければ`No module`になる
-from jyanken import Jyanken
+# PyCharmではfromを正確に書かなければ`No module`になる(sourceFileの中にあるファイルは普通にインポートできる)
+# from src.chapter3.component.player import Player
 from player import Player
 
-def main():
-    print("ジャンケンを始めます")
-    jyanken = Jyanken(myself, opponent)
-    myself = Player()
-    opponent = Player()
 
-    jyanken.start()
+def main():
+    myself = Player(name="エドモンド本田")
+
+    myself.chooseHand()
+    opponent.test("hoge")
 
 
     my_hand = int(input())
