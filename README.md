@@ -1,4 +1,5 @@
 # study_python
+[![Build Status](https://travis-ci.org/AmatsukiUrato/study_python.svg?branch=master)](https://travis-ci.org/AmatsukiUrato/study_python)
 python勉強会のための問題及び回答を掲載する
 
 # Environment
