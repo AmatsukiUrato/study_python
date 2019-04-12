@@ -1,6 +1,6 @@
 import unittest
 
-from src.chapter1 import question1
+from chapter1 import question1
 
 
 class TestChapter1(unittest.TestCase):
