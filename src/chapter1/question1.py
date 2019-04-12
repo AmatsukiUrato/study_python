@@ -8,7 +8,10 @@ def main():
     W = random.randint(0, 20)
     h = random.randint(1, H)
     w = random.randint(1, W)
+    calc(H, W, h, w)
 
+
+def calc1(H, W, h ,w):
     print(H, W, h, w)
 
     # 1
@@ -23,9 +26,14 @@ def main():
     print(allSell, drawH, drawW, overDraw, drawedSell)
 
     print(allSell - drawedSell)
+    return allSell - drawedSell
 
+def calc2(H,W,h,w):
     # 2
-    print((H - h) * (W - w))
+    ans = (H - h) * (W - w)
+    print(ans)
+    return ans
+
 
 
 if __name__ == "__main__":
