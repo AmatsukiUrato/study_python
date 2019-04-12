@@ -8,7 +8,8 @@ def main():
     W = random.randint(0, 20)
     h = random.randint(1, H)
     w = random.randint(1, W)
-    calc(H, W, h, w)
+    calc1(H, W, h, w)
+    calc2(H, W, h, w)
 
 
 def calc1(H, W, h ,w):
