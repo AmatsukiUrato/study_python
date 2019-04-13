@@ -33,11 +33,11 @@ def can_pay(wallet, price):
 def choice(menu):
     print(menu)
     product = input()
-    while not product in menu:
+    if not product in menu:
         print()
         print("お店にある商品を選んでください")
-        print(menu)
-        product = input()
+        product = choice(menu)
+    return product
 
 
 if __name__ == "__main__":
