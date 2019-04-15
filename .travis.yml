@@ -5,6 +5,9 @@ python:
 script:
 - python -m unittest chapter1.tests
 - python -m unittest chapter3.tests
-notifications:
-  email:
+notifications:  
+  email:  
+    recipients:  
     - AmatsukiUrato@gmail.com
+    on_success: always  
+    on_failure: always
