@@ -13,6 +13,8 @@ class Player:
 
     def say_win_voice(self):
         sentence_number = random.randint(0, len(self.winner_sentence) - 1)
+        print()
+        print(self.name + " Win!")
         print(self.winner_sentence[sentence_number])
 
     def show_hand(self):

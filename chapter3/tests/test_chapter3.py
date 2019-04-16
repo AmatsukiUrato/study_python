@@ -33,3 +33,7 @@ class TestChapter3Question3(unittest.TestCase):
     def test_can_pay2(self):
         self.assertEqual(question3.can_pay(0, 600), False)
         self.assertEqual(question3.can_pay(-200, 600), False)
+
+
+if __name__ == "__main__":
+    unittest.main()

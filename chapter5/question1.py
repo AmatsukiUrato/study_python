@@ -1,9 +1,8 @@
 # coding: utf-8
-import random
 
 # PyCharmではfromを正確に書かなければ`No module`になる(sourceFileの中にあるファイルは普通にインポートできる)
 # from src.chapter3.component.player import Player
-from chapter5.component.player import Player
+from chapter5.player import Player
 
 junken_pattern = {
     "winner_1p_pattern": [("グー", "チョキ"), ("チョキ", "パー"), ("パー", "グー")],
@@ -32,7 +31,7 @@ def janken_judge(myself, opponent):
     elif janken_result in junken_pattern["winner_2p_pattern"]:
         opponent.say_win_voice()
     elif janken_result in junken_pattern["draw_pattern"]:
-        print("draw")
+        print("\ndraw")
     else:
         print("error")
 
