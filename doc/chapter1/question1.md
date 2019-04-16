@@ -1,4 +1,4 @@
-# Question
+## 課題1-1
 https://atcoder.jp/contests/abc121/tasks/abc121_a
 これのa問題をpython3で解く
 引数読み込みでランダムは面倒くさいので、下記の様な記述でOK
