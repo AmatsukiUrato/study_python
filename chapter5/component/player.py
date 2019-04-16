@@ -2,7 +2,7 @@
 import random
 
 class Player:
-    hand_dictionary = {1: "グー", 2:"チョキ", 3:"パー"}
+    _hand_dictionary = {1: "グー", 2:"チョキ", 3:"パー"}
 
     def __init__(self, name, winner_sentence):
         self.name = name
@@ -16,7 +16,7 @@ class Player:
         print(self.winner_sentence[sentence_number])
 
     def show_hand(self):
-        return self.hand_dictionary[ self.myself_hand_number]
+        return self._hand_dictionary[ self.myself_hand_number]
 
     def say_hand(self):
         print(self.name + "の手は" + self.show_hand())
