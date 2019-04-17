@@ -3,9 +3,9 @@ language: python
 python:
     - 3.7
 script:
-- python -m unittest discover chapter1.tests
-- python -m unittest discover chapter3.tests
-- python -m unittest discover chapter5.tests
+- python -m unittest discover chapter1.tests -v
+- python -m unittest discover chapter3.tests -v
+- python -m unittest discover chapter5.tests -v
 notifications:
   email:  
     recipients:  
