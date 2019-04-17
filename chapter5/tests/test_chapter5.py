@@ -14,16 +14,19 @@ class TestPlayer(unittest.TestCase):
         self.p1.choose_hand()
         self.p2.choose_hand()
 
-        self.assertIn(self.p1.myself_hand_number, [1, 2, 3])
-        self.assertIn(self.p2.myself_hand_number, [1, 2, 3])
+        self.assertIn(self.p1._myself_hand_number, [1, 2, 3])
+        self.assertIn(self.p2._myself_hand_number, [1, 2, 3])
 
         # use greater(equal) less(equal)
-        self.assertEqual(self.p1.myself_hand_number < 1 or 3 < self.p1.myself_hand_number, False)
-        self.assertEqual(self.p1.myself_hand_number < 1 or 3 < self.p2.myself_hand_number, False)
+        self.assertEqual(self.p1._myself_hand_number < 1 or 3 < self.p1._myself_hand_number, False)
+        self.assertEqual(self.p1._myself_hand_number < 1 or 3 < self.p2._myself_hand_number, False)
 
     def test_show_hand(self):
         self.assertIn(self.p1.show_hand(), ["グー", "チョキ", "パー"])
         self.assertIn(self.p2.show_hand(), ["グー", "チョキ", "パー"])
+
+        p3 = player.Player("p3", ("say1"))
+        self.assertEqual(p3.show_hand(), "まだ手を考えていません")
 
 
 if __name__ == "__main__":

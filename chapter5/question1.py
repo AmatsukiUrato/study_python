@@ -14,6 +14,7 @@ junken_pattern = {
 def main():
     myself = Player("エドモンド本田", ("ガッーハッハッハッ！", "お前さん、中々じゃった！", "どんなもんじゃい！", "豪快に決めたでごわす！", "世界は広いのう！"))
     opponent = Player("ガイル", ("Mission Complete", "Easy Operation", "拍子抜けだな", "Good Job"))
+
     myself.choose_hand()
     opponent.choose_hand()
 
@@ -21,7 +22,6 @@ def main():
     opponent.say_hand()
 
     janken_judge(myself, opponent)
-
 
 def janken_judge(myself, opponent):
     janken_result = (myself.show_hand(), opponent.show_hand())
