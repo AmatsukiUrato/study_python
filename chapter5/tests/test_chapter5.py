@@ -17,6 +17,7 @@ class TestPlayer(unittest.TestCase):
         self.assertIn(self.p1.myself_hand_number, [1, 2, 3])
         self.assertIn(self.p2.myself_hand_number, [1, 2, 3])
 
+        # use greater(equal) less(equal)
         self.assertEqual(self.p1.myself_hand_number < 1 or 3 < self.p1.myself_hand_number, False)
         self.assertEqual(self.p1.myself_hand_number < 1 or 3 < self.p2.myself_hand_number, False)
 
