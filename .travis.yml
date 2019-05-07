@@ -5,6 +5,7 @@ python:
 script:
 - python -m unittest discover chapter1.tests -v
 - python -m unittest discover chapter3.tests -v
+- python -m unittest discover chapter4.tests -v
 - python -m unittest discover chapter6.tests -v
 notifications:
   email:  
