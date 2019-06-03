@@ -1,40 +1,28 @@
-# coding: utf-8
+from chapter5.module import print_result
 
-# PyCharmではfromを正確に書かなければ`No module`になる(sourceFileの中にあるファイルは普通にインポートできる)
-# from src.chapter3.component.player import Player
-from chapter5.player import Player
+print("1")
 
-junken_pattern = {
-    "winner_1p_pattern": [("グー", "チョキ"), ("チョキ", "パー"), ("パー", "グー")],
-    "winner_2p_pattern": [("チョキ", "グー"), ("パー", "チョキ"), ("グー", "パー")],
-    "draw_pattern": [("グー", "グー"), ("チョキ", "チョキ"), ("パー", "パー")],
-}
+all_color = ("red", "blue", "yellow", "green")
+color_number = {1: "red", 2: "blue", 3: "yellow", 4: "green"}
 
 
-def main():
-    myself = Player("エドモンド本田", ("ガッーハッハッハッ！", "お前さん、中々じゃった！", "どんなもんじゃい！", "豪快に決めたでごわす！", "世界は広いのう！"))
-    opponent = Player("ガイル", ("Mission Complete", "Easy Operation", "拍子抜けだな", "Good Job"))
+def pick_color(number):
+    if color_number.get(number) in all_color:
+        return color_number.get(number)
+    print("2")
 
-    myself.choose_hand()
-    opponent.choose_hand()
-
-    myself.say_hand()
-    opponent.say_hand()
-
-    janken_judge(myself, opponent)
-
-def janken_judge(myself, opponent):
-    janken_result = (myself.show_hand(), opponent.show_hand())
-
-    if janken_result in junken_pattern["winner_1p_pattern"]:
-        myself.say_win_voice()
-    elif janken_result in junken_pattern["winner_2p_pattern"]:
-        opponent.say_win_voice()
-    elif janken_result in junken_pattern["draw_pattern"]:
-        print("\ndraw")
-    else:
-        print("error")
-
+print("3")
 
 if __name__ == "__main__":
-    main()
+    print("main")
+    color_name = pick_color(1)
+    print(color_name)
+
+    collected_color = []
+    for key in color_number:
+        if color_name[1] in color_number[key]:
+            collected_color.append(color_number[key])
+
+    print_result(collected_color)
+
+print("4")
