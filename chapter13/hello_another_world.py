@@ -9,7 +9,7 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    # app.run()
+    app.run()
 
     '''
     if you want to open application on localAreaNetwork
@@ -19,7 +19,7 @@ if __name__ == '__main__':
     '''
     if you want to switch to debug mode
     '''
-    app.debug = True
-    app.run()
+    # app.debug = True
+    # app.run()
     ''' or '''
     # app.run(debug=True)
